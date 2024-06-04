@@ -4,76 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MVA Pet Care</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="bg-warning text-black p-3">
-        <div class="container-fluid d-flex justify-content-between align-items-center">
-            <h1 class="m-0">MVA PET CARE</h1>
-            <div class="d-flex align-items-center">
-                <a href="#"><img src="instagram.png" alt="Instagram" class="social-icon"></a>
-                <a href="#"><img src="twitter.png" alt="Twitter" class="social-icon mx-2"></a>
-                <a href="#"><img src="facebook.png" alt="Facebook" class="social-icon"></a>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">MVA PET CARE</div>
+            <div class="follow-us">
+                <span>Follow Us</span>
+                <div class="social-icons">
+                    <img src="instagram.png" alt="Instagram">
+                    <img src="twitter.png" alt="Twitter">
+                    <img src="facebook.png" alt="Facebook">
+                </div>
             </div>
-            <div class="text-right">
-                <p class="m-0">Mon-Fri: 9-5<br>Sat-Sun: 12-6<br>Ben St, Ottawa, ON, K1N 6N5</p>
+            <div class="header-info">
+                <div class="hours">Mon-Fri: 9-5<br>Sat-Sun: 12-6</div>
+                <div class="address">Ben St, Ottawa, ON, K1N 6N5</div>
             </div>
         </div>
     </header>
 
     <!-- Main Section -->
-    <main class="bg-light text-center py-5">
-        <h2>Welcome to MVA Pet Care.</h2>
-        <p>Find a service for your furry now!</p>
-        <button class="btn btn-outline-dark mb-4">Book Appointment</button>
-        <div>
+    <main class="main-section">
+        <h1>Welcome to MVA Pet Care. Find a service for your furry now!</h1>
+        <button class="appointment-btn">Book Appointment</button>
+        <div class="video-placeholder">
             <p>&lt;Cat video&gt;</p>
-            <button class="btn btn-dark rounded-circle"><span class="play-icon"></span></button>
+            <div class="play-button"></div>
         </div>
-        <div class="d-flex justify-content-around my-5">
-            <div class="circle d-flex flex-column align-items-center justify-content-center">
-                <img src="expert.png" alt="Experts">
-                <button class="btn btn-outline-dark mt-2">Our Experts</button>
+        <div class="circles">
+            <div class="circle">
+                <p>&lt;img&gt;</p>
+                <button>Our Experts</button>
             </div>
-            <div class="circle d-flex flex-column align-items-center justify-content-center">
-                <img src="services.png" alt="Services">
-                <button class="btn btn-outline-dark mt-2">Our Services</button>
+            <div class="circle">
+                <p>&lt;img&gt;</p>
+                <button>Our Services</button>
             </div>
-            <div class="circle d-flex flex-column align-items-center justify-content-center">
-                <img src="signup.png" alt="Sign Up">
-                <button class="btn btn-outline-dark mt-2">Sign Up</button>
+            <div class="circle">
+                <p>&lt;img&gt;</p>
+                <button>Sign Up</button>
             </div>
         </div>
-        <section class="bg-secondary text-white p-5">
-            <h3>Testimonials</h3>
-            <p>&lt; This section will contain Testimonials from previous clients &gt;</p>
-        </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-warning text-black text-center p-3">
-        <div class="container d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center">
-                <img src="phone-call.png" alt="Phone" class="footer-icon">
-                <p class="m-0 ml-2">123-456-789</p>
+    <!-- Testimonial Section -->
+    <section class="testimonial-section">
+        <p>&lt; This section will contain Testimonials from previous clients &gt;</p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="contact-info">
+                <div class="phone">
+                    <img src="phone-call.png" alt="Phone">
+                    <span>123-456-789</span>
+                </div>
+                <div class="email">
+                    <img src="mail.png" alt="Email">
+                    <span>Contact@mvapetcare.com</span>
+                </div>
             </div>
-            <div class="d-flex align-items-center">
-                <img src="mail.png" alt="Mail" class="footer-icon">
-                <p class="m-0 ml-2">Contact@mvapetcare.com</p>
+            <div class="footer-menu">
+                <a href="#">Home</a>
+                <a href="#">Services</a>
+                <a href="#">Experts</a>
+                <a href="#">Book</a>
             </div>
-            <div>
-                <a href="#" class="text-dark">Terms of Service</a> | <a href="#" class="text-dark">Privacy Policy</a>
+            <div class="legal-info">
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy Policy</a>
             </div>
-        </div>
-        <div class="mt-3">
-            <nav class="d-flex justify-content-center">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="services.html" class="nav-link">Services</a>
-                <a href="experts.html" class="nav-link">Experts</a>
-                <a href="booking.html" class="nav-link">Book</a>
-            </nav>
         </div>
     </footer>
 </body>
