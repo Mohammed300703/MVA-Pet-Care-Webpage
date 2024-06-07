@@ -1,0 +1,176 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #FDF5E6; /* Cream background */
+}
+
+.header, .footer {
+    background: rgb(68, 105, 116) !important; /* Updated blue color for header and footer */
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-content, .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 64px;
+    color: #f8fbf9; /* Dark green text */
+}
+
+.nav-menu a {
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    color: #000000; /* Black text */
+    text-decoration: none;
+    background: #2E8B57; /* Dark green background */
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px; /* Rounded corners */
+}
+
+.nav-menu a:hover {
+    color: #2E8B57; /* Dark green text on hover */
+    background: #2E8B57; /* White background on hover */
+    border: 3px solid #2E8B57; /* Dark green border */
+}
+
+.header-info .hours, .header-info .address {
+    font-family: 'Libre Bodoni', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 24px;
+    color: #f9fbfa; /* Dark green text */
+}
+
+.booking-confirmation {
+    background: #FFFFFF;
+}
+
+.confirmation-header {
+    background: rgb(68, 105, 116); /* Updated blue color for header */
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.confirmation-header h1 {
+    font-family: 'Libre Bodoni', serif;
+    font-weight: 700;
+    font-size: 48px;
+    color: #000000;
+}
+
+.confirmation-message {
+    background: #2C3E50; /* Dark background for the message */
+}
+
+.confirmation-message p {
+    font-family: 'Libre Bodoni', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 48px;
+    color: rgb(68, 105, 116); /* Updated blue color for text */
+}
+
+.booking-details {
+    background: #D9D9D9;
+    border: 4px solid #000000;
+}
+
+.booking-details p {
+    font-family: 'Libre Bodoni', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 55px;
+    color: #000000;
+}
+
+.booking-details span {
+    font-family: 'Libre Bodoni', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 55px;
+    color: #000000;
+}
+
+.footer .contact-info .phone, .footer .contact-info .email {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer .contact-info .phone img, .footer .contact-info .email img {
+    width: 24px;
+    height: 24px;
+}
+
+.footer .contact-info .phone span, .footer .contact-info .email span {
+    font-family: 'Libre Bodoni', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 24px;
+    color: #fcfefd; /* Dark green text */
+}
+
+.footer .follow-us {
+    text-align: center;
+}
+
+.footer .follow-us span {
+    font-family: 'Libre Bodoni', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 48px;
+    color: #f9fbfa; /* Dark green text */
+}
+
+.footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer .social-icons img {
+    width: 50px;
+    height: 50px;
+}
+
+.footer .legal-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.footer .legal-info a {
+    font-family: 'Libre Bodoni', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 24px;
+    color: #f8faf9; /* Dark green text */
+    text-decoration: underline;
+}
+
+.return-home-btn {
+    background: #0e5ba7; /* Dark background for button */
+    color: rgb(68, 105, 116); /* Updated blue color for text */
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px; /* Rounded corners */
+}
+
+.return-home-btn:hover {
+    background: #176932; /* Darker background on hover */
+}
