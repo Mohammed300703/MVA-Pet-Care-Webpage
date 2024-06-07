@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookings - MVA Pet Care</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="bstyle.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header container-fluid bg-warning shadow">
+        <div class="header-content row justify-content-between align-items-center px-3">
+            <div class="logo col-md-4 text-center text-md-left">MVA PET CARE</div>
+            <div class="nav-menu col-md-4 d-flex justify-content-center">
+                <a href="index.html" class="btn btn-dark text-white mx-2">Home</a>
+                <a href="services.html" class="btn btn-dark text-white mx-2">Services</a>
+                <a href="experts.html" class="btn btn-dark text-white mx-2">Experts</a>
+                <a href="bookings.html" class="btn btn-dark text-white mx-2">Book</a>
+            </div>
+            <div class="header-info col-md-4 text-center text-md-right">
+                <div class="hours">Mon-Fri: 9-5<br>Sat-Sun: 12-6</div>
+                <div class="address">Ben St, Ottawa, ON, K1N 6N5</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Booking Section -->
+    <main class="booking-section container-fluid text-center mt-5 p-5 bg-light">
+        <h2 class="mb-4">Book an Appointment</h2>
+        <form id="bookingForm">
+            <div class="form-group row">
+                <label for="name" class="col-sm-2 col-form-label">Name:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="name" placeholder="Enter Your Name" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="email" class="col-sm-2 col-form-label">Email:</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="email" placeholder="Enter Your Email" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="service" class="col-sm-2 col-form-label">Service:</label>
+                <div class="col-sm-10">
+                    <select class="form-control" id="service" required>
+                        <option value="">Select a Service</option>
+                        <option value="Grooming">Grooming</option>
+                        <option value="General Consultation">General Consultation</option>
+                        <option value="Surgery">Surgery</option>
+                        <option value="Vaccination">Vaccination</option>
+                        <option value="Boarding">Boarding</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="expert" class="col-sm-2 col-form-label">Expert:</label>
+                <div class="col-sm-10">
+                    <select class="form-control" id="expert" required>
+                        <option value="">Select an Expert</option>
+                        <option value="Dr. Whiskers McPurr">Dr. Whiskers McPurr</option>
+                        <option value="Dr. Barkus Woofington">Dr. Barkus Woofington</option>
+                        <option value="Dr. Quackers McDuck">Dr. Quackers McDuck</option>
+                        <option value="Dr. Hopsy Flufftail">Dr. Hopsy Flufftail</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="time" class="col-sm-2 col-form-label">Time:</label>
+                <div class="col-sm-10">
+                    <select class="form-control" id="time" required>
+                        <option value="">Select a Time</option>
+                        <option value="09:00 AM">09:00 AM</option>
+                        <option value="09:30 AM">09:30 AM</option>
+                        <option value="10:00 AM">10:00 AM</option>
+                        <option value="10:30 AM">10:30 AM</option>
+                        <option value="11:00 AM">11:00 AM</option>
+                        <option value="11:30 AM">11:30 AM</option>
+                        <option value="12:00 PM">12:00 PM</option>
+                        <option value="12:30 PM">12:30 PM</option>
+                        <option value="01:00 PM">01:00 PM</option>
+                        <option value="01:30 PM">01:30 PM</option>
+                        <option value="02:00 PM">02:00 PM</option>
+                        <option value="02:30 PM">02:30 PM</option>
+                        <option value="03:00 PM">03:00 PM</option>
+                        <option value="03:30 PM">03:30 PM</option>
+                        <option value="04:00 PM">04:00 PM</option>
+                        <option value="04:30 PM">04:30 PM</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="date" class="col-sm-2 col-form-label">Date:</label>
+                <div class="col-sm-10">
+                    <input type="date" class="form-control" id="date" required>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="pets" class="col-sm-2 col-form-label">Pets:</label>
+                <div class="col-sm-10" id="pet-entries">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" name="petType" placeholder="Type of Pet (e.g., Cat, Dog)" required>
+                        <input type="number" class="form-control" name="petCount" placeholder="Number of Pets" min="1" required>
+                        <div class="input-group-append">
+                            <button class="btn btn-success" type="button" id="addPet">Add Pet</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="comments" class="col-sm-2 col-form-label">Comments:</label>
+                <div class="col-sm-10">
+                    <textarea class="form-control" id="comments" rows="3" placeholder="Add any comments here"></textarea>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-dark mt-3">Book</button>
+        </form>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer container-fluid bg-warning mt-5 py-3">
+        <div class="footer-content row justify-content-between align-items-center">
+            <div class="contact-info col-md-4 d-flex flex-column text-center text-md-left">
+                <div class="phone mb-2">
+                    <img src="phone-call.png" alt="Phone" class="mr-2">
+                    <span>123-456-789</span>
+                </div>
+                <div class="email">
+                    <img src="mail.png" alt="Email" class="mr-2">
+                    <span>Contact@mvapetcare.com</span>
+                </div>
+            </div>
+            <div class="follow-us col-md-4 text-center">
+                <span>Follow Us</span>
+                <div class="social-icons d-flex justify-content-center">
+                    <img src="instagram.png" alt="Instagram" class="mx-1">
+                    <img src="twitter.png" alt="Twitter" class="mx-1">
+                    <img src="facebook.png" alt="Facebook" class="mx-1">
+                </div>
+            </div>
+            <div class="legal-info col-md-4 d-flex flex-column text-center text-md-right">
+                <a href="#" class="text-dark mb-1">Terms of Service</a>
+                <a href="#" class="text-dark">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JS to handle form submission and pre-selection -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const expert = urlParams.get('expert');
+            if (expert) {
+                document.getElementById('expert').value = expert;
+            }
+        });
+
+        document.getElementById('addPet').addEventListener('click', function() {
+            const petEntries = document.getElementById('pet-entries');
+            const newEntry = document.createElement('div');
+            newEntry.className = 'input-group mb-3';
+            newEntry.innerHTML = `
+                <input type="text" class="form-control" name="petType" placeholder="Type of Pet (e.g., Cat, Dog)" required>
+                <input type="number" class="form-control" name="petCount" placeholder="Number of Pets" min="1" required>
+                <div class="input-group-append">
+                    <button class="btn btn-danger removePet" type="button">Remove</button>
+                </div>`;
+            petEntries.appendChild(newEntry);
+        });
+
+        document.getElementById('pet-entries').addEventListener('click', function(event) {
+            if (event.target.classList.contains('removePet')) {
+                event.target.parentElement.parentElement.remove();
+            }
+        });
+
+        document.getElementById('bookingForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const service = document.getElementById('service').value;
+            const expert = document.getElementById('expert').value;
+            const time = document.getElementById('time').value;
+            const date = document.getElementById('date').value;
+            const comments = document.getElementById('comments').value;
+
+            const petTypes = Array.from(document.getElementsByName('petType')).map(input => input.value);
+            const petCounts = Array.from(document.getElementsByName('petCount')).map(input => input.value);
+            const pets = petTypes.map((type, index) => `${type}: ${petCounts[index]}`).join(', ');
+
+            const bookingDetails = {
+                name: name,
+                email: email,
+                service: service,
+                expert: expert,
+                time: time,
+                date: date,
+                comments: comments,
+                pets: pets
+            };
+
+            const queryString = new URLSearchParams(bookingDetails).toString();
+            window.location.href = `confirmation.html?${queryString}`;
+        });
+    </script>
+</body>
+</html>

@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MVA Pet Care</title>
+    <title>Booking Confirmation - MVA Pet Care</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="cstyle.css">
 </head>
 <body>
     <!-- Header Section -->
@@ -27,24 +27,17 @@
         </div>
     </header>
 
-    <!-- Main Section -->
-    <main class="main-section container-fluid text-center p-5">
-        <video class="video-background" autoplay muted loop>
-            <source src="CVID.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <h1>Welcome to MVA Pet Care. Find a service for your furry now!</h1>
-        <a href="bookings.html" class="btn btn-outline-dark appointment-btn mt-3">Book Appointment</a>
-        <div class="circles row justify-content-center mt-4">
-            <div class="circle col-md-4" style="background-image: url('Experts.jpg');">
-                <a href="experts.html" class="btn btn-outline-dark cbtn mt-2">Our Experts</a>
-            </div>
-            <div class="circle col-md-4" style="background-image: url('services.jpg');">
-                <a href="services.html" class="btn btn-outline-dark cbtn mt-2">Our Services</a>
-            </div>
-            <div class="circle col-md-4" style="background-image: url('signup.jpg');">
-                <a href="bookings.html" class="btn btn-outline-dark cbtn mt-2">Sign Up</a>
-            </div>
+    <!-- Booking Confirmation Section -->
+    <main class="confirmation-section container-fluid text-center mt-5 p-5 bg-light">
+        <h2 class="mb-4">Booking Confirmation</h2>
+        <p>Thank you for trusting us in taking care of your furry friend! Your booking details will be found below.</p>
+        <div class="booking-details mt-5">
+            <p>Date: <span id="date"></span></p>
+            <p>Time: <span id="time"></span></p>
+            <p>Service: <span id="service"></span></p>
+            <p>Expert: <span id="expert"></span></p>
+            <p>Booking Reference: <span id="reference"></span></p>
+            <button onclick="window.location.href='index.html'" class="btn btn-dark mt-3">Return to Home</button>
         </div>
     </main>
 
@@ -80,5 +73,16 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JS to display booking details -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            document.getElementById('date').textContent = urlParams.get('date');
+            document.getElementById('time').textContent = urlParams.get('time');
+            document.getElementById('service').textContent = urlParams.get('service');
+            document.getElementById('expert').textContent = urlParams.get('expert');
+            document.getElementById('reference').textContent = 'REF' + Math.floor(Math.random() * 100000);
+        });
+    </script>
 </body>
 </html>
